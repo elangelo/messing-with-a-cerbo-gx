@@ -1,0 +1,29 @@
+# Cerbo P1 Bridge configuration
+# Copy to /data/cerbo-p1-bridge/config.yaml on Cerbo and adjust.
+# manage.sh install does this automatically if no config.yaml exists yet.
+
+# Raspberry Pi endpoint that serves latest smart-meter values
+source_url: http://192.168.0.200:8090/api/v1/latest
+
+# Poll frequency from Cerbo to Pi
+poll_interval_ms: 500
+
+# HTTP timeout for polling
+request_timeout_seconds: 2.0
+
+# Mark source as stale when received_at is older than this
+stale_after_seconds: 5
+
+# Victron role this service should publish as
+# Allowed: grid, pvinverter
+role: grid
+
+# Friendly name shown in Cerbo UI
+custom_name: Raspberry Pi P1
+
+# Victron DBus identity settings
+device_instance: 40
+position: 0
+
+# Logging level: DEBUG, INFO, WARNING, ERROR
+log_level: INFO

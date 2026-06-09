@@ -1,0 +1,3 @@
+#!/bin/sh
+mkdir -p /var/log/cerbo-p1-bridge
+exec multilog t /var/log/cerbo-p1-bridge

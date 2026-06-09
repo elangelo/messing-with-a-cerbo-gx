@@ -1,0 +1,4 @@
+#!/bin/sh
+exec 2>&1
+cd /data/cerbo-p1-bridge
+exec /usr/bin/python3 /data/cerbo-p1-bridge/cerbo-p1-bridge.py
