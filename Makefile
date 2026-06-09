@@ -14,7 +14,7 @@ restart:
 	ssh -o BatchMode=yes $(CERBO_HOST) "'$(REMOTE_DIR)/manage.sh' restart"
 
 logs:
-	ssh -o BatchMode=yes $(CERBO_HOST) "tail -f /var/log/cerbo-p1-bridge/current"
+	ssh -o BatchMode=yes $(CERBO_HOST) "tail -f /var/log/cerbo-p1-bridge/current | tai64nlocal"
 
 help:
 	@echo "Targets:"
